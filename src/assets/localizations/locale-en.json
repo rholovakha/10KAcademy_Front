@@ -31,21 +31,21 @@
       "title": "FAQ",
       "questions": [
         {
-          "title": "Как проходит обучение?",
-          "text": "<p>Менторинг – самая эффективная методика обучения. При обучении с ментором студент решает задачи самостоятельно, а ментор направляет студента по программе и может проффесионально ответить на возникшие вопросы\nПоддержка комьюнити, обмен опытом и сложностей обучения</p><p>Это несет большую ценность для будущего специалиста в любой сфере. Уверенность менеджера в своем сотруднике, в его способности самостоятельно решать задачи, брать ответственность, принимать решения на основании  BestPractice, делать работу без надобности в пошаговых инструкциях отлично выделяет специалиста среди его коллег</p><p>Это эффективнее, чем курсы лекций или задачи для самостоятельного решения.</p>",
+          "title": "For whom this course is suitable?",
+          "text": "<p>1. The course is suitable for those who do not know where to start. What is IT? In this course, you will pass the basic experience in different roles from the IT field, which will allow you to understand the whole picture and confidently move on with your choice.</p>\n<p>2. Do you want to start educating IT field, but are afraid? Don't have \"special\" talent which others do? - There is no difference in working in IT or working as loader or checkout salesperson. In all 3 cases, there is a work schedule and it will be difficult at the begining to use to. But then its just a work.</p>",
           "isOpen": "true"
         },
         {
-          "title": "Как мы помогаем с работой?",
-          "text": "<p>Менторинг – самая эффективная методика обучения. При обучении с ментором студент решает задачи самостоятельно, а ментор направляет студента по программе и может проффесионально ответить на возникшие вопросы\nПоддержка комьюнити, обмен опытом и сложностей обучения</p><p>Это несет большую ценность для будущего специалиста в любой сфере. Уверенность менеджера в своем сотруднике, в его способности самостоятельно решать задачи, брать ответственность, принимать решения на основании  BestPractice, делать работу без надобности в пошаговых инструкциях отлично выделяет специалиста среди его коллег</p><p>Это эффективнее, чем курсы лекций или задачи для самостоятельного решения.</p>"
+          "title": "How is the education going?",
+          "text": "<p>1. The student receives the task one by one as he completes.</p>\n<p>2. Education takes place in 2 stages. In the first, the student tries different IT roles by personal experience. On the second, gaining knowledge and experience in the specialty that you liked the most.</p>"
         },
         {
-          "title": "Для кого это подойдет?",
-          "text": "<p>Менторинг – самая эффективная методика обучения. При обучении с ментором студент решает задачи самостоятельно, а ментор направляет студента по программе и может проффесионально ответить на возникшие вопросы\nПоддержка комьюнити, обмен опытом и сложностей обучения</p><p>Это несет большую ценность для будущего специалиста в любой сфере. Уверенность менеджера в своем сотруднике, в его способности самостоятельно решать задачи, брать ответственность, принимать решения на основании  BestPractice, делать работу без надобности в пошаговых инструкциях отлично выделяет специалиста среди его коллег</p><p>Это эффективнее, чем курсы лекций или задачи для самостоятельного решения.</p>"
+          "title": "How do we help with work?",
+          "text": "<p>It's very simple. The final assignment of the course is to create a resume and get a job. Only by finishing this task means that the course is completed for the student.</p>"
         },
         {
-          "title": "Какие преимущества?",
-          "text": "<p>Менторинг – самая эффективная методика обучения. При обучении с ментором студент решает задачи самостоятельно, а ментор направляет студента по программе и может проффесионально ответить на возникшие вопросы\nПоддержка комьюнити, обмен опытом и сложностей обучения</p><p>Это несет большую ценность для будущего специалиста в любой сфере. Уверенность менеджера в своем сотруднике, в его способности самостоятельно решать задачи, брать ответственность, принимать решения на основании  BestPractice, делать работу без надобности в пошаговых инструкциях отлично выделяет специалиста среди его коллег</p><p>Это эффективнее, чем курсы лекций или задачи для самостоятельного решения.</p>"
+          "title": "What are the advanteges?",
+          "text": "<p>Mentoring is the most effective teaching method. When learning with a mentor, the student solves problems on his own, and the mentor guides the student through the program and can professionally answer the questions that arise. Community support, exchange of experience and learning difficulties.</p>\n<p>This is of great value for a future specialist in any field. The manager's confidence in his employee, in his ability to independently solve problems, take responsibility, make decisions based on BestPractice, do work without the need for step-by-step instructions perfectly distinguishes the specialist from his colleagues</p>"
         }
       ]
     },

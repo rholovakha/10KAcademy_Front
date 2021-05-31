@@ -344,11 +344,17 @@
           padding: .45rem 1rem 1.5rem;
         }
 
-        p {
-          margin-bottom: 1.36rem;
+        &::ng-deep {
+          p {
+            margin-bottom: 1.36rem;
 
-          &:last-child {
-            margin-bottom: 0;
+            @media screen and (max-width: 768px) {
+              margin-bottom: 1rem;
+            }
+
+            &:last-child {
+              margin-bottom: 0;
+            }
           }
         }
 

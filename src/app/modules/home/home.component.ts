@@ -63,7 +63,10 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   toggleQuestion(questionIndex: number): void {
-    this.questions[questionIndex].isOpen = !this.questions[questionIndex].isOpen;
+    this.questions = this.questions.map((question: QuestionInterface, index: number) => ({
+      ...question,
+      isOpen: index === questionIndex ? !question.isOpen : false
+    }));
   }
 
   nextReview(): void {
