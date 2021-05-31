@@ -1,10 +1,12 @@
-import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Inject, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { L10N_LOCALE, L10nLocale, L10nTranslationService } from 'angular-l10n';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { SwiperOptions } from 'swiper';
 
 import { QuestionInterface } from './models/question.interface';
 import { ExperienceInterface } from './models/experience.interface';
 import { specialtyOptions } from './configs/specialtyOptions';
+import { SwiperComponent } from 'swiper/types/shared';
 
 @Component({
   selector: 'app-home',
@@ -12,11 +14,19 @@ import { specialtyOptions } from './configs/specialtyOptions';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit, OnDestroy {
+  @ViewChild('componentRef') componentRef?: SwiperComponent;
+
   ownerProjects: string[];
   ownerExperience: ExperienceInterface[];
   questions: QuestionInterface[];
   consultationForm: FormGroup;
   specialtyOptions = specialtyOptions;
+  reviewsSliderConfig: SwiperOptions = {
+    a11y: { enabled: true },
+    direction: 'horizontal',
+    slidesPerView: 1,
+  };
+  reviewsCurrentSlide = 0;
 
   constructor(
     @Inject(L10N_LOCALE) public locale: L10nLocale,
@@ -54,5 +64,13 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   toggleQuestion(questionIndex: number): void {
     this.questions[questionIndex].isOpen = !this.questions[questionIndex].isOpen;
+  }
+
+  nextReview(): void {
+    if (this.reviewsCurrentSlide < 4) {
+      this.reviewsCurrentSlide++;
+    } else {
+      this.reviewsCurrentSlide = 0;
+    }
   }
 }

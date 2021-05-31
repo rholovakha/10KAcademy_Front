@@ -3,81 +3,134 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding-top: 137px;
-  padding-bottom: 282px;
+  padding-top: 6.2rem;
+  padding-bottom: 11rem;
+
+  @media screen and (max-width: 560px) {
+    height: 100vh;
+    padding-top: 5rem;
+    padding-bottom: 0;
+    background: linear-gradient(-45deg, #feee67 0%, #feee67 45%, #dfb2f3 45%, #dfb2f3 55%, #45c0a4 55%, #45c0a4 100%);
+  }
+
   &__title-wrapper {
     display: flex;
     justify-content: center;
   }
+
   &__title {
     color: #333333;
     font-family: Russo One;
     font-style: normal;
     font-weight: normal;
-    font-size: 100px;
-    line-height: 120px;
+    font-size: 4.5rem;
+    line-height: 1.21;
+
+    @media screen and (max-width: 560px) {
+      font-size: 2.7rem;
+    }
   }
+
   &__sub-title-callback {
     width: 50%;
     margin-left: 50%;
-    padding-left: 50px;
+    padding-left: 2.3rem;
+
+    @media screen and (max-width: 560px) {
+      width: 100%;
+      margin-left: auto;
+    }
   }
+
   &__sub-title {
-    padding-top: 58px;
+    padding-top: 2.6rem;
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
+    font-size: 1.1rem;
+    line-height: 1.3rem;
 
     color: #262626;
   }
+
   &__callback {
-    margin-top: 29px;
+    margin-top: 1.3rem;
   }
 }
 
 
 
 .owner-screen {
-  padding-bottom: 74px;
+  padding-bottom: 3.36rem;
   background: #262626;
+
+  @media screen and (max-width: 768px) {
+    padding-bottom: 2.5rem;
+  }
 
   &__content {
     display: flex;
     justify-content: space-between;
-    padding: 80px 290px 60px 160px;
+    padding: 3.64rem 13.2rem 2.7rem 7.27rem;
+
+    @media screen and (max-width: 1200px) {
+      padding: 3.64rem 3rem 2.7rem 3rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      display: block;
+      padding: 2.5rem 1rem 1.5rem 1rem;
+    }
   }
 
   &__title-group {
+    padding-right: 1rem;
   }
 
   &__title {
     font-family: Russo One;
-    font-size: 64px;
+    font-size: 2.9rem;
     color: #FEEE67;
+
+    @media screen and (max-width: 560px) {
+      font-size: 2rem;
+    }
   }
 
   &__name {
-    padding-top: 80px;
+    padding-top: 3.64rem;
     font-family: Russo One;
-    font-size: 48px;
+    font-size: 2.2rem;
     color: #FFFFFF;
     text-align: center;
+
+    @media screen and (max-width: 768px) {
+      padding-top: 1.5rem;
+      text-align: left;
+    }
   }
 
   &__projects {
-    margin-top: 70px;
-    font-size: 40px;
+    margin-top: 3.2rem;
+    font-size: 1.8rem;
     color: #F9FDFE;
+
+    @media screen and (max-width: 992px) {
+      font-size: 1.5rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      margin-top: 1.5rem;
+    }
 
     &-item {
     }
   }
 
   &__photo {
-    flex: 0 0 446px;
-    width: 446px;
-    padding-top: 50px;
+    flex: 0 0 20.3rem;
+    width: 20.3rem;
+    max-width: 100%;
+    padding-top: 2.3rem;
 
     img {
       max-width: 100%;
@@ -87,17 +140,30 @@
   &__experience {
     display: flex;
     justify-content: space-between;
-    padding: 30px 220px 60px;
+    padding: 1.35rem 10rem 2.7rem;
+
+    @media screen and (max-width: 992px) {
+      padding: 1rem 2rem 2rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      display: block;
+      padding: 0 0 1rem;
+    }
 
     &-item {
-      padding: 0 20px;
+      padding: 0 .9rem;
       font-family: Russo One;
       color: #F9FDFE;
 
+      @media screen and (max-width: 768px) {
+        padding: 1rem 1rem;
+      }
+
       &-years {
-        margin-right: 5px;
-        font-size: 64px;
-        line-height: 26px;
+        margin-right: .23rem;
+        font-size: 2.9rem;
+        line-height: 1.18rem;
 
         .owner-screen__experience-item:nth-child(1) & {
           color: #DFB2F4;
@@ -112,19 +178,19 @@
 
       &-actions {
         font-family: Roboto;
-        font-size: 22px;
-        line-height: 26px;
+        font-size: 1rem;
+        line-height: 1.18rem;
       }
     }
   }
 
   &__technologies {
-    padding: 15px 0px;
+    padding: .68rem 0;
     border-top: 2px solid #F9FDFE;
     border-bottom: 2px solid #F9FDFE;
     font-family: Manrope;
-    font-size: 24px;
-    letter-spacing: 0.12em;
+    font-size: 1.1rem;
+    letter-spacing: 0.12rem;
     color: #F9FDFE;
   }
 
@@ -134,21 +200,53 @@
 
 .faq-screen {
   display: flex;
-  padding: 90px 0;
+  padding: 4.1rem 0;
+
+  @media screen and (max-width: 1200px) {
+    flex-wrap: wrap;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 2.5rem 0;
+  }
 
   &__title {
-    padding-left: 157px;
+    padding-left: 7.14rem;
+    padding-right: 1rem;
+    padding-bottom: 1.5rem;
     flex: 1 1 auto;
     font-family: Russo One;
     font-style: normal;
     font-weight: normal;
-    font-size: 64px;
+    font-size: 2.9rem;
     line-height: 1.2;
     color: #DFB2F4;
+
+    @media screen and (max-width: 992px) {
+      padding-left: 3rem;
+    }
+
+    @media screen and (max-width: 992px) {
+      padding-left: 1rem;
+    }
+
+    @media screen and (max-width: 560px) {
+      font-size: 2rem;
+    }
   }
 
   &__questions {
-    flex: 0 0 1040px;
+    flex: 0 0 47.3rem;
+    max-width: 47.3rem;
+
+    @media screen and (max-width: 1200px) {
+      flex: 1 1 auto;
+      margin-left: auto;
+    }
+
+    @media screen and (max-width: 660px) {
+      flex: 0 0 100%;
+    }
 
     &-item {
       border-top: 3px solid #262626;
@@ -163,14 +261,18 @@
 
       &-title {
         position: relative;
-        padding: 35px 150px 35px 80px;
+        padding: 1.6rem 6.8rem 1.6rem 3.65rem;
         font-family: Russo One;
         font-style: normal;
         font-weight: normal;
-        font-size: 32px;
-        line-height: 39px;
+        font-size: 1.45rem;
+        line-height: 1.77rem;
         color: #262626;
         cursor: pointer;
+
+        @media screen and (max-width: 660px) {
+          padding: 1rem 3rem 1rem 1rem;
+        }
 
         .faq-screen__questions-item_open & {
           color: #DFB2F4;
@@ -179,16 +281,20 @@
         button {
           position: absolute;
           display: block;
-          right: 100px;
+          right: 4.55rem;
           top: 50%;
-          margin-top: -15px;
-          width: 31px;
-          height: 31px;
+          margin-top: -.68rem;
+          width: 1.41rem;
+          height: 1.41rem;
           border: 0;
           background-color: transparent;
           font-size: 0;
           color: transparent;
           cursor: pointer;
+
+          @media screen and (max-width: 660px) {
+            right: 1rem;
+          }
 
           &::before,
           &::after {
@@ -203,10 +309,10 @@
             }
           }
           &::before {
-            top: 14px;
+            top: .64rem;
             left: 0;
             width: 100%;
-            height: 3px;
+            height: .14rem;
 
             .faq-screen__questions-item_open & {
               transform: rotate(45deg);
@@ -214,8 +320,8 @@
           }
           &::after {
             top: 0;
-            left: 14px;
-            width: 3px;
+            left: .64rem;
+            width: .14rem;
             height: 100%;
 
             .faq-screen__questions-item_open & {
@@ -227,15 +333,19 @@
 
       &-text {
         display: none;
-        width: 730px;
-        max-width: 100%;
+        width: 100%;
+        max-width: 33.2rem;
         color: #fff;
-        padding: 10px 80px 65px;
-        font-size: 22px;
+        padding: .45rem 3.65rem 2.95rem;
+        font-size: 1rem;
         line-height: 1.5;
 
+        @media screen and (max-width: 560px) {
+          padding: .45rem 1rem 1.5rem;
+        }
+
         p {
-          margin-bottom: 30px;
+          margin-bottom: 1.36rem;
 
           &:last-child {
             margin-bottom: 0;
@@ -253,49 +363,232 @@
 
 
 .reviews {
-  padding-top: 95px;
-  padding-bottom: 85px;
+  padding: 4.32rem 0 3.86rem;
   background-color: #FEEE67;
 
+  @media screen and (max-width: 768px) {
+    padding: 2.5rem 0;
+  }
+
   &__title {
-    padding-left: 160px;
-    padding-right: 30px;
+    padding-left: 7.3rem;
+    padding-right: 1.36rem;
     font-family: Russo One;
-    font-size: 64px;
+    font-size: 2.9rem;
     color: #262626;
+
+    @media screen and (max-width: 992px) {
+      padding-left: 3rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    @media screen and (max-width: 560px) {
+      font-size: 2rem;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    margin: 3.8rem 7.3rem 0;
+    padding: 6.2rem;
+    background-color: rgba(0, 0, 0, .15);
+    //border: 3px solid #262626;
+
+    @media screen and (max-width: 1200px) {
+      padding: 3rem;
+    }
+
+    @media screen and (max-width: 992px) {
+      margin: 1.5rem 3rem 0;
+    }
+
+    @media screen and (max-width: 768px) {
+      margin: 1.5rem 1rem 0;
+      padding: 1rem 1rem 3rem;
+    }
+
+    &-item {
+      display: flex;
+      align-items: flex-start;
+
+      @media screen and (max-width: 560px) {
+        display: block;
+      }
+
+      &-photo {
+        flex: 0 0 22.7rem;
+        width: 22.7rem;
+        padding-right: 4rem;
+
+        @media screen and (max-width: 992px) {
+          flex: 0 0 18rem;
+          width: 18rem;
+          padding-right: 1rem;
+        }
+
+        @media screen and (max-width: 640px) {
+          flex: 0 0 13rem;
+          width: 13rem;
+        }
+
+        @media screen and (max-width: 560px) {
+          flex: 0 0 auto;
+          width: auto;
+          padding-right: 0;
+          padding-bottom: 1rem;
+        }
+
+        img {
+          display: block;
+          max-width: 100%;
+        }
+      }
+
+      &-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex: 1 1 auto;
+        color: #fff;
+
+        @media screen and (max-width: 560px) {
+          display: block;
+        }
+      }
+
+      &-name {
+        margin-bottom: 2rem;
+        padding-right: 1rem;
+        font-size: 1.45rem;
+
+        @media screen and (max-width: 768px) {
+          margin-bottom: 1rem;
+        }
+
+        @media screen and (max-width: 560px) {
+          padding-right: 0;
+          font-size: 1.2rem;
+        }
+      }
+
+      &-specialization {
+        margin-bottom: 2rem;
+        font-size: 1.45rem;
+
+        @media screen and (max-width: 768px) {
+          margin-bottom: 1rem;
+          font-size: 1.2rem;
+        }
+      }
+
+      &-text {
+        flex: 0 0 100%;
+      }
+    }
+
+    &-controls {
+    }
+
+    &-control {
+      &_next {
+        position: absolute;
+        right: 3rem;
+        bottom: 3rem;
+        cursor: pointer;
+        width: 2.2rem;
+        overflow: hidden;
+        transition: width .3s;
+
+        @media screen and (max-width: 1200px) {
+          right: 1rem;
+          bottom: 1rem;
+        }
+
+        svg {
+          display: block;
+          width: 5.8rem;
+          height: auto;
+          margin-left: -3.6rem;
+          transition: margin .3s;
+        }
+
+        &:hover {
+          width: 5.8rem;
+
+          svg {
+            margin-left: 0;
+          }
+        }
+      }
+    }
   }
 }
 
 
 
 .payment {
-  padding-top: 90px;
-  padding-bottom: 110px;
+  padding: 4.09rem 0 5rem;
+
+  @media screen and (max-width: 768px) {
+    padding: 2.5rem 0;
+  }
 
   &__title {
-    padding-left: 160px;
-    padding-right: 30px;
+    padding-left: 7.27rem;
+    padding-right: 1.36rem;
     font-family: Russo One;
-    font-size: 64px;
+    font-size: 2.9rem;
     color: #45C0A4;
     text-transform: uppercase;
+
+    @media screen and (max-width: 992px) {
+      padding-left: 3rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    @media screen and (max-width: 560px) {
+      font-size: 2rem;
+    }
   }
 
   &__content {
     display: flex;
     flex-wrap: wrap;
-    width: 800px;
+    width: 45.5rem;
     max-width: 100%;
     margin-left: auto;
-    margin-right: 200px;
-    padding-top: 85px;
+    padding-right: 9.1rem;
+    padding-top: 3.86rem;
+
+    @media screen and (max-width: 992px) {
+      width: 42.5rem;
+      padding-right: 3rem;
+      padding-left: 3rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      padding: 1rem 0 0;
+    }
 
     &-item {
-      padding: 10px 20px;
+      padding: .45rem .9rem;
+
+      @media screen and (max-width: 768px) {
+        padding: 0.5rem 1rem;
+      }
 
       &-title {
         font-family: Russo One;
-        font-size: 32px;
+        font-size: 1.45rem;
         color: #262626;
 
         &::ng-deep {
@@ -306,7 +599,7 @@
       }
 
       &-text {
-        padding-top: 15px;
+        padding-top: .68rem;
         font-family: Roboto;
 
         &-inner {
@@ -325,11 +618,19 @@
       }
 
       &_materials {
-        flex: 0 0 350px;
+        flex: 0 0 15.9rem;
+
+        @media screen and (max-width: 768px) {
+          flex: 0 0 100%;
+        }
       }
 
       &_employment {
-        flex: 0 0 450px;
+        flex: 0 0 20.45rem;
+
+        @media screen and (max-width: 768px) {
+          flex: 0 0 100%;
+        }
       }
     }
   }
@@ -338,43 +639,70 @@
 
 
 .consultation {
-  padding: 90px 320px 80px 160px;
+  padding: 4.1rem 14.55rem 3.64rem 7.27rem;
   background-color: #DFB2F4;
 
+  @media screen and (max-width: 992px) {
+    padding: 4rem 3rem 3rem 3rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 2.5rem 1rem 2.5rem 1rem;
+  }
+
   &__title {
-    padding-right: 30px;
+    padding-right: 1.36rem;
     font-family: Russo One;
-    font-size: 64px;
+    font-size: 2.9rem;
     color: #262626;
     text-transform: uppercase;
+
+    @media screen and (max-width: 768px) {
+      padding-right: 0;
+    }
+
+    @media screen and (max-width: 560px) {
+      font-size: 2rem;
+    }
   }
 
   &__content {
     display: flex;
     justify-content: space-between;
-    padding-top: 60px;
+    padding-top: 2.73rem;
+
+    @media screen and (max-width: 768px) {
+      display: block;
+      padding-top: 1.5rem;
+    }
   }
 
   &__text {
-    font-size: 26px;
-    padding-right: 30px;
+    font-size: 1.18rem;
+    padding-right: 1.36rem;
+
+    @media screen and (max-width: 768px) {
+      padding-right: 0;
+      padding-bottom: 1.5rem;
+    }
   }
 
   &__form {
-    flex: 0 0 480px;
-    width: 480px;
+    flex: 0 0 21.82rem;
+    width: 21.82rem;
+    max-width: 100%;
 
     &-input {
-      padding-bottom: 20px;
+      padding-bottom: .9rem;
 
       label {
         display: block;
-        padding-bottom: 10px;
+        padding-bottom: .45rem;
       }
     }
 
     &-button {
-      padding-top: 10px;
+      padding-top: .45rem;
 
       .button {
         width: 100%;

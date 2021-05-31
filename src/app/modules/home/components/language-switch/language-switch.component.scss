@@ -13,8 +13,16 @@
     color: #262626;
     cursor: pointer;
 
+    .language-switch_white & {
+      color: #fff;
+    }
+
     &_active {
       color: #DFB2F4;
+
+      .language-switch_white & {
+        color: #DFB2F4;
+      }
     }
   }
 }
