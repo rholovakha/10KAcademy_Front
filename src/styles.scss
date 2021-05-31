@@ -7,19 +7,24 @@
   font-family: Russo One;
   font-style: normal;
   font-weight: normal;
-  font-size: 22px;
-  line-height: 27px;
+  font-size: 1rem;
+  line-height: 1.2;
   color: #FFFFFF;
-  padding: 17px 31px;
+  padding: .8rem 1.41rem;
   text-align: center;
   cursor: pointer;
+
+  &_white {
+    background: #fff;
+    color: #262626;
+  }
 }
 
 .input {
   display: block;
   width: 100%;
-  height: 53px;
-  padding: 0 20px;
+  height: 2.41rem;
+  padding: 0 .91rem;
   border: 0;
   background-color: #fff;
 }
@@ -27,7 +32,7 @@
 .select.ng-select {
   &.ng-select-single {
     .ng-select-container {
-      height: 53px;
+      height: 2.41rem;
       border: 0;
       border-radius: 0;
       box-shadow: none !important;
@@ -59,19 +64,20 @@
     width: auto;
     height: auto;
     padding: 0;
-    right: 10px;
+    right: .45rem;
 
     .ng-arrow {
       display: block;
       top: auto;
-      width: 24px;
-      height: 17px;
+      width: 1.1rem;
+      height: .77rem;
       background-image: url("/assets/images/icons/icon-select.svg");
       background-repeat: no-repeat;
       background-size: 100% 100%;
       border: 0;
     }
   }
+
   .ng-clear-wrapper {
     display: none;
   }

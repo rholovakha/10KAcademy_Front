@@ -59,8 +59,6 @@
       <app-ticker [lineText]="'Spring, Spring-Boot, NodeJS, CSS, JavaScript, Express, Angular, React, GIT, Java, Jenkins, Docker, SQL, MongoDB, RabbitMQ, Kafka, Hazelcast, MySql, Redis, Togglz, AWS'"></app-ticker>
     </div>
 
-
-
   </div>
 
 
@@ -90,6 +88,50 @@
 
   <div class="reviews">
     <div class="reviews__title">{{'home.reviews.title' | translate:locale.language}}</div>
+
+    <div class="reviews__slider">
+      <swiper [config]="reviewsSliderConfig" [(index)]="reviewsCurrentSlide" #componentRef>
+        <div class="reviews__slider-item">
+          <div class="reviews__slider-item-photo">
+            <img src="/assets/images/review-1.jpg" alt="">
+          </div>
+          <div class="reviews__slider-item-content">
+            <div class="reviews__slider-item-name">John Dou</div>
+            <div class="reviews__slider-item-specialization">Java Software Engineer</div>
+            <div class="reviews__slider-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+          </div>
+        </div>
+        <div class="reviews__slider-item">
+          <div class="reviews__slider-item-photo">
+            <img src="/assets/images/review-1.jpg" alt="">
+          </div>
+          <div class="reviews__slider-item-content">
+            <div class="reviews__slider-item-name">John Dou 2</div>
+            <div class="reviews__slider-item-specialization">Java Software Engineer</div>
+            <div class="reviews__slider-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+          </div>
+        </div>
+        <div class="reviews__slider-item">
+          <div class="reviews__slider-item-photo">
+            <img src="/assets/images/review-1.jpg" alt="">
+          </div>
+          <div class="reviews__slider-item-content">
+            <div class="reviews__slider-item-name">John Dou 3</div>
+            <div class="reviews__slider-item-specialization">Java Software Engineer</div>
+            <div class="reviews__slider-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+          </div>
+        </div>
+      </swiper>
+
+      <div class="reviews__slider-controls">
+        <div class="reviews__slider-control reviews__slider-control_next" (click)="nextReview()">
+          <svg width="128" height="30" viewBox="0 0 128 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M127.414 16.4142C128.195 15.6332 128.195 14.3668 127.414 13.5858L114.686 0.857864C113.905 0.0768156 112.639 0.0768156 111.858 0.857864C111.077 1.63891 111.077 2.90524 111.858 3.68629L123.172 15L111.858 26.3137C111.077 27.0948 111.077 28.3611 111.858 29.1421C112.639 29.9232 113.905 29.9232 114.686 29.1421L127.414 16.4142ZM0 17L126 17V13L0 13L0 17Z" fill="white"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
   </div>
 
 

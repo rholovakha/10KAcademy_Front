@@ -54,10 +54,24 @@ a:active {
   color: #067bbf;
   text-decoration: none;
 }
+html {
+  font-size: 22px;
+  
+  @media screen and (max-width: 1700px) {
+    font-size: 20px;
+  }
+
+  @media screen and (max-width: 1500px) {
+    font-size: 18px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    font-size: 16px;
+  }
+}
 body {
   min-width: 320px;
-  font-family: 'Lato';
-  font-size: 22px;
+  font-family: 'Roboto';
   font-weight: normal;
   color: #262626;
   line-height: 1.2;
