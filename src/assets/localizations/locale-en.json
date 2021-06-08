@@ -1,29 +1,29 @@
 {
   "home": {
     "firstScreen": {
-      "title": "Менторство<br>в сфере IT",
-      "subTitle": "Всего одно требование - твое желание!<br>Найди себя в IT"
+      "title": "Mentoring<br>in IT",
+      "subTitle": "The only requirement is your desire!<br>Find yourself as an IT engineer"
     },
     "owner": {
-      "title": "Основатель Академии",
-      "name": "Роман Головаха",
+      "title": "Founder of the Academy",
+      "name": "Roman Golovakha",
       "projects": [
-        "Основатель, CEO в WeSked",
-        "Основатель, CEO в 10K Academy",
-        "Основатель, CEO в SuperPostman"
+        "Founder, Product Owner at WeSked",
+        "Founder, Mentor at 10K.Academy",
+        "Founder, CEO at SuperPostman"
       ],
       "experience": [
         {
           "years": "12",
-          "actions": "лет опыта -<br>Разработчик и Архитектор<br>программного обеспечения"
+          "actions": "years experience - <br>as a Java Developer and Software Architect"
         },
         {
           "years": "10",
-          "actions": "лет опыта - Тим-лидер и<br>менеджер проекта"
+          "actions": "years experience - as Team Lead and<br>Project Manager"
         },
         {
           "years": "5",
-          "actions": "лет опыта - Владелец IT<br>компани и CTO"
+          "actions": "years experience - as an IT company Owner <br>and CEO"
         }
       ]
     },
@@ -41,7 +41,7 @@
         },
         {
           "title": "How do we help with work?",
-          "text": "<p>It's very simple. The final assignment of the course is to create a resume and get a job. Only by finishing this task means that the course is completed for the student.</p>"
+          "text": "<p>Consultancy all the way of creating a cv and job interviewing. The final assignment of the course is to create a resume and get a job. Only by finishing this task means that the course is completed for the student.</p>"
         },
         {
           "title": "What are the advanteges?",
@@ -50,45 +50,45 @@
       ]
     },
     "reviews": {
-      "title": "ОТЗЫВЫ"
+      "title": "Reviews"
     },
     "payment": {
-      "title": "Гарантии и оплата",
+      "title": "Guarantees and payment",
       "materials": {
-        "title": "Доступ навсегда",
-        "text": "Ты получаешь неограниченный доступ ко всем материалам"
+        "title": "Unlimited access",
+        "text": "You get unlimited access to all materials"
       },
       "employment": {
-        "title": "100% трудоустройство",
-        "text": "Работаем на результат и сопровождаем на этапе трудоустройства"
+        "title": "100% employment",
+        "text": "Result-orientation and support at the stage of employment"
       },
       "cost": {
         "title": "Заплати столько, <span>сколько считаешь нужным</span>",
-        "text": "У нас нет конкретной оплаты за услуги. Ты можешь заплатить столько, сколько, по-твоему, будет достаточно",
-        "button": "Задонатить"
+        "text": "There’s no a certain payment for the service. Pay as much as you think is appropriate anytime you like",
+        "button": "Donate"
       }
     },
     "consultation": {
-      "title": "ЗАПИСЬ НА КОНСУЛЬТАЦИЮ",
-      "text": "Оставь свои контакты,<br>и мы свяжемся с тобой!",
+      "title": "Book a consultation",
+      "text": "Leave your contact details,<br>and we’ll be in touch!",
       "form": {
         "name": {
-          "label": "Имя*"
+          "label": "Name*"
         },
         "phone": {
-          "label": "Телефон*"
+          "label": "Phone number*"
         },
         "email": {
           "label": "Email*"
         },
         "specialty": {
-          "label": "Хочу быть"
+          "label": "I want to be"
         },
-        "submit": "Отправить заявку"
+        "submit": "Send a request"
       }
     }
   },
   "callbackButton": {
-    "text": "Оставить заявку"
+    "text": "Send a request"
   }
 }
