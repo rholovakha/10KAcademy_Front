@@ -55,6 +55,7 @@ a:active {
   text-decoration: none;
 }
 html {
+  scroll-behavior: smooth;
   font-size: 22px;
   
   @media screen and (max-width: 1700px) {

@@ -2,5 +2,6 @@
   <button
       class="button"
       [ngClass]="{ 'button_white': whiteStyle }"
+      (click)="scrollFn('consultation')"
   >{{'callbackButton.text' | translate:locale.language}}</button>
 </div>
