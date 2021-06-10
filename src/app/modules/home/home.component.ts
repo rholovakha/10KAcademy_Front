@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Inject, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Component, Inject, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { L10N_LOCALE, L10nLocale, L10nTranslationService } from 'angular-l10n';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { SwiperOptions } from 'swiper';
@@ -7,6 +7,7 @@ import { QuestionInterface } from './models/question.interface';
 import { ExperienceInterface } from './models/experience.interface';
 import { specialtyOptions } from './configs/specialtyOptions';
 import { SwiperComponent } from 'swiper/types/shared';
+import { ReviewInterface } from './models/review.interface';
 
 @Component({
   selector: 'app-home',
@@ -21,6 +22,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   questions: QuestionInterface[];
   consultationForm: FormGroup;
   specialtyOptions = specialtyOptions;
+  reviews: ReviewInterface[];
   reviewsSliderConfig: SwiperOptions = {
     a11y: { enabled: true },
     direction: 'horizontal',
@@ -41,6 +43,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.ownerProjects = this.translation.translate('home.owner.projects');
         this.ownerExperience = this.translation.translate('home.owner.experience');
         this.questions = this.translation.translate('home.faq.questions');
+        this.reviews = this.translation.translate('home.reviews.list');
       }
     });
   }
@@ -69,8 +72,16 @@ export class HomeComponent implements OnInit, OnDestroy {
     }));
   }
 
+  prevReview(): void {
+    if (this.reviewsCurrentSlide > 0) {
+      this.reviewsCurrentSlide--;
+    } else {
+      this.reviewsCurrentSlide = this.reviews.length - 1;
+    }
+  }
+
   nextReview(): void {
-    if (this.reviewsCurrentSlide < 4) {
+    if (this.reviewsCurrentSlide < this.reviews.length - 1) {
       this.reviewsCurrentSlide++;
     } else {
       this.reviewsCurrentSlide = 0;

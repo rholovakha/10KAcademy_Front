@@ -501,34 +501,47 @@
     }
 
     &-control {
+      position: absolute;
+      bottom: 3rem;
+      cursor: pointer;
+      width: 2.2rem;
+      overflow: hidden;
+      transition: width .3s;
+
+      @media screen and (max-width: 1200px) {
+        bottom: 1rem;
+      }
+
+      svg {
+        display: block;
+        width: 5.8rem;
+        height: auto;
+        margin-left: -3.6rem;
+        transition: margin .3s;
+      }
+
+      &:hover {
+        width: 5.8rem;
+
+        svg {
+          margin-left: 0;
+        }
+      }
+
+      &_prev {
+        left: calc(100% - 15.6rem);
+        transform: rotate(180deg);
+
+        @media screen and (max-width: 1200px) {
+          left: calc(100% - 13.6rem);
+        }
+      }
+
       &_next {
-        position: absolute;
         right: 3rem;
-        bottom: 3rem;
-        cursor: pointer;
-        width: 2.2rem;
-        overflow: hidden;
-        transition: width .3s;
 
         @media screen and (max-width: 1200px) {
           right: 1rem;
-          bottom: 1rem;
-        }
-
-        svg {
-          display: block;
-          width: 5.8rem;
-          height: auto;
-          margin-left: -3.6rem;
-          transition: margin .3s;
-        }
-
-        &:hover {
-          width: 5.8rem;
-
-          svg {
-            margin-left: 0;
-          }
         }
       }
     }
