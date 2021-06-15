@@ -2,12 +2,17 @@ import { Component, Inject, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { L10N_LOCALE, L10nLocale, L10nTranslationService } from 'angular-l10n';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { SwiperOptions } from 'swiper';
+import { SwiperComponent } from 'swiper/types/shared';
+import { Subject } from 'rxjs';
+import { take, takeUntil } from 'rxjs/operators';
 
 import { QuestionInterface } from './models/question.interface';
 import { ExperienceInterface } from './models/experience.interface';
 import { specialtyOptions } from './configs/specialtyOptions';
-import { SwiperComponent } from 'swiper/types/shared';
 import { ReviewInterface } from './models/review.interface';
+import { FormsService } from '../shared/services/forms/forms.service';
+import { SubmitConsultationResultComponent } from './components/submit-consultation-result/submit-consultation-result.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-home',
@@ -17,11 +22,14 @@ import { ReviewInterface } from './models/review.interface';
 export class HomeComponent implements OnInit, OnDestroy {
   @ViewChild('componentRef') componentRef?: SwiperComponent;
 
+  private unsubscribe: Subject<void> = new Subject();
+
   ownerProjects: string[];
   ownerExperience: ExperienceInterface[];
   questions: QuestionInterface[];
   consultationForm: FormGroup;
   specialtyOptions = specialtyOptions;
+  specialtyFormDisabled = false;
   reviews: ReviewInterface[];
   reviewsSliderConfig: SwiperOptions = {
     a11y: { enabled: true },
@@ -33,12 +41,16 @@ export class HomeComponent implements OnInit, OnDestroy {
   constructor(
     @Inject(L10N_LOCALE) public locale: L10nLocale,
     private translation: L10nTranslationService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private formsService: FormsService,
+    public dialog: MatDialog
   ) { }
 
   ngOnInit(): void {
     this.createConsultationForm();
-    this.translation.onChange().subscribe({
+    this.translation.onChange().pipe(
+      takeUntil(this.unsubscribe),
+    ).subscribe({
       next: () => {
         this.ownerProjects = this.translation.translate('home.owner.projects');
         this.ownerExperience = this.translation.translate('home.owner.experience');
@@ -48,6 +60,11 @@ export class HomeComponent implements OnInit, OnDestroy {
     });
   }
 
+  ngOnDestroy(): void {
+    this.unsubscribe.next();
+    this.unsubscribe.complete();
+  }
+
   createConsultationForm(): void {
     this.consultationForm = this.formBuilder.group({
       name: '',
@@ -55,14 +72,6 @@ export class HomeComponent implements OnInit, OnDestroy {
       email: '',
       specialty: '',
     });
-  }
-
-  submitConsultationForm(): void {
-    console.log('this.consultationForm ', this.consultationForm.value);
-    this.createConsultationForm();
-  }
-
-  ngOnDestroy(): void {
   }
 
   toggleQuestion(questionIndex: number): void {
@@ -86,5 +95,23 @@ export class HomeComponent implements OnInit, OnDestroy {
     } else {
       this.reviewsCurrentSlide = 0;
     }
+  }
+
+  submitConsultationForm(): void {
+    this.specialtyFormDisabled = true;
+
+    this.formsService.sendForm('xrgrkgld', this.consultationForm.value).pipe(
+      take(1)
+    ).subscribe(res => {
+      console.log('res ', res);
+      this.createConsultationForm();
+      this.dialog.open(SubmitConsultationResultComponent, {
+        width: '1000px',
+      });
+    }, error => {
+      console.log('error ', error);
+    }, () => {
+      this.specialtyFormDisabled = false;
+    });
   }
 }

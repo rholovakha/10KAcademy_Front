@@ -15,6 +15,7 @@ import {
   L10nCustomStorage,
   L10nCustomTranslationLoader
 } from './l10n.config';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,9 @@ import {
       }
     ),
 
-    L10nIntlModule
+    L10nIntlModule,
+
+    BrowserAnimationsModule
   ],
   providers: [
     {

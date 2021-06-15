@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
+import { SwiperModule } from 'ngx-swiper-wrapper';
+import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { HomeRoutingModule } from './home-routing.modle';
 import { SharedModule } from '../shared/shared.module';
@@ -9,9 +13,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { CallbackButtonComponent } from './components/callback-button/callback-button.component';
 import { LanguageSwitchComponent } from './components/language-switch/language-switch.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { SwiperModule } from 'ngx-swiper-wrapper';
-import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
-import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+
+import { SubmitConsultationResultComponent } from './components/submit-consultation-result/submit-consultation-result.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -24,13 +27,15 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     HeaderComponent,
     CallbackButtonComponent,
     LanguageSwitchComponent,
-    FooterComponent
+    FooterComponent,
+    SubmitConsultationResultComponent
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
     SharedModule,
-    SwiperModule
+    SwiperModule,
+    MatDialogModule
   ],
   providers: [
     {
