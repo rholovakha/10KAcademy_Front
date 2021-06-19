@@ -28,10 +28,14 @@
 .input {
   display: block;
   width: 100%;
-  height: 2.41rem;
+  height: 2.23rem;
   padding: 0 .91rem;
-  border: 0;
   background-color: #fff;
+  border: 2px solid #fff;
+
+  &_error {
+    border-color: #f00;
+  }
 }
 
 .select.ng-select {
@@ -88,5 +92,6 @@
   }
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.cdk-overlay-pane .mat-dialog-container {
+  padding: 0;
+}

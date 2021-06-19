@@ -93,13 +93,16 @@
       "text": "Leave your contact details,<br>and we’ll be in touch!",
       "form": {
         "name": {
-          "label": "Name*"
+          "label": "Name*",
+          "error": "Введіть Ім'я"
         },
         "phone": {
-          "label": "Phone number*"
+          "label": "Phone number*",
+          "error": "Введіть номер телефону"
         },
         "email": {
-          "label": "Email*"
+          "label": "Email*",
+          "error": "E-mail не вірний"
         },
         "specialty": {
           "label": "I want to be"
@@ -110,5 +113,9 @@
   },
   "callbackButton": {
     "text": "Send a request"
+  },
+  "submit-consultation-result": {
+    "titleImageUrl": "/assets/images/thanks.png",
+    "text": "Твоя заявка была отправлена!"
   }
 }

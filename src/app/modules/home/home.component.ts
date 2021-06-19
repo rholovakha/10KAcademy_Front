@@ -1,6 +1,6 @@
 import { Component, Inject, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { L10N_LOCALE, L10nLocale, L10nTranslationService } from 'angular-l10n';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SwiperOptions } from 'swiper';
 import { SwiperComponent } from 'swiper/types/shared';
 import { Subject } from 'rxjs';
@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   questions: QuestionInterface[];
   consultationForm: FormGroup;
   specialtyOptions = specialtyOptions;
-  specialtyFormDisabled = false;
+  consultationFormDisabled = false;
   reviews: ReviewInterface[];
   reviewsSliderConfig: SwiperOptions = {
     a11y: { enabled: true },
@@ -65,15 +65,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.unsubscribe.complete();
   }
 
-  createConsultationForm(): void {
-    this.consultationForm = this.formBuilder.group({
-      name: '',
-      phone: '',
-      email: '',
-      specialty: '',
-    });
-  }
-
   toggleQuestion(questionIndex: number): void {
     this.questions = this.questions.map((question: QuestionInterface, index: number) => ({
       ...question,
@@ -97,8 +88,21 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
   }
 
+  createConsultationForm(): void {
+    this.consultationForm = this.formBuilder.group({
+      name: [ '', [ Validators.required ] ],
+      phone: [ '', [ Validators.required ] ],
+      email: [ '', [ Validators.required, Validators.email ] ],
+      specialty: '',
+    });
+  }
+
   submitConsultationForm(): void {
-    this.specialtyFormDisabled = true;
+    if (this.consultationFormDisabled || !this.consultationForm.valid) {
+      return;
+    }
+
+    this.consultationFormDisabled = true;
 
     this.formsService.sendForm('xrgrkgld', this.consultationForm.value).pipe(
       take(1)
@@ -111,7 +115,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     }, error => {
       console.log('error ', error);
     }, () => {
-      this.specialtyFormDisabled = false;
+      this.consultationFormDisabled = false;
     });
   }
 }

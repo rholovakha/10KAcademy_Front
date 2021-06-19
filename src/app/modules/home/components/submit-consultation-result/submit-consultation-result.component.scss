@@ -1,0 +1,39 @@
+.submit-consultation-result {
+  position: relative;
+  background-color: #262626;
+  padding: 3rem 2rem;
+  text-align: center;
+
+  &__close {
+    position: absolute;
+    display: block;
+    top: 1rem;
+    right: 1rem;
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+
+    svg {
+      display: block;
+      width: 1.45rem;
+      height: auto;
+    }
+  }
+
+  &__title {
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__text {
+    margin-top: 1rem;
+    color: #fff;
+    font-size: 1.45rem;
+
+    @media screen and (max-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+}

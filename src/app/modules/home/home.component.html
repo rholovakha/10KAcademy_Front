@@ -188,7 +188,12 @@
               id="consultation-name"
               type="text"
               class="input"
+              [ngClass]="{ 'input_error': consultationForm.controls['name'].touched && consultationForm.controls['name'].invalid }"
             >
+            <div
+              class="consultation__form-input-error"
+              *ngIf="consultationForm.controls['name'].touched && consultationForm.controls['name'].invalid"
+            >{{'home.consultation.form.name.error' | translate:locale.language}}</div>
           </div>
           <div class="consultation__form-input">
             <label
@@ -200,6 +205,10 @@
               type="text"
               class="input"
             >
+            <div
+              class="consultation__form-input-error"
+              *ngIf="consultationForm.controls['phone'].touched && consultationForm.controls['phone'].invalid"
+            >{{'home.consultation.form.phone.error' | translate:locale.language}}</div>
           </div>
           <div class="consultation__form-input">
             <label
@@ -211,6 +220,10 @@
               type="text"
               class="input"
             >
+            <div
+              class="consultation__form-input-error"
+              *ngIf="consultationForm.controls['email'].touched && consultationForm.controls['email'].invalid"
+            >{{'home.consultation.form.email.error' | translate:locale.language}}</div>
           </div>
           <div class="consultation__form-input">
             <label
@@ -228,7 +241,7 @@
           <div class="consultation__form-button">
             <button
               class="button"
-              [disabled]="specialtyFormDisabled"
+              [disabled]="consultationFormDisabled || !consultationForm.valid"
             >{{'home.consultation.form.submit' | translate:locale.language}}</button>
           </div>
         </form>

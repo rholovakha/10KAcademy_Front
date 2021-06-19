@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
+import { L10N_LOCALE, L10nLocale, L10nTranslationService } from 'angular-l10n';
 
 @Component({
   selector: 'app-submit-consultation-result',
@@ -9,7 +10,9 @@ import { MatDialogRef } from '@angular/material/dialog';
 export class SubmitConsultationResultComponent {
 
   constructor(
-    public dialogRef: MatDialogRef<SubmitConsultationResultComponent>
+    public dialogRef: MatDialogRef<SubmitConsultationResultComponent>,
+    @Inject(L10N_LOCALE) public locale: L10nLocale,
+    private translation: L10nTranslationService
   ) { }
 
   close(): void {

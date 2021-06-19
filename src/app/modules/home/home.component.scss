@@ -7,9 +7,9 @@
   padding-bottom: 11rem;
 
   @media screen and (max-width: 560px) {
-    height: 100vh;
+    height-min: 100vh;
     padding-top: 5rem;
-    padding-bottom: 0;
+    padding-bottom: 1rem;
     background: linear-gradient(-45deg, #feee67 0%, #feee67 45%, #dfb2f3 45%, #dfb2f3 55%, #45c0a4 55%, #45c0a4 100%);
   }
 
@@ -733,6 +733,12 @@
       label {
         display: block;
         padding-bottom: .45rem;
+      }
+
+      &-error {
+        margin-top: .5rem;
+        font-size: .75rem;
+        color: #f00;
       }
     }
 
