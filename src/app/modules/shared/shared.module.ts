@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { L10nTranslationModule } from 'angular-l10n';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { TickerComponent } from './components/ticker/ticker.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -19,6 +20,7 @@ import { TickerComponent } from './components/ticker/ticker.component';
     ReactiveFormsModule,
     L10nTranslationModule,
     NgSelectModule,
+    RouterModule,
     TickerComponent
   ]
 })

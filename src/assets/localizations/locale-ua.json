@@ -115,7 +115,11 @@
     "text": "Надіслати заявку"
   },
   "submit-consultation-result": {
-    "titleImageUrl": "/assets/images/thanks.png",
-    "text": "Твоя заявка была отправлена!"
+    "titleImageUrl": "/assets/images/thanks-ua.png",
+    "text": "Твоя заявка була відправлена!"
+  },
+  "page-not-found": {
+    "text": "Page not found",
+    "button": "Go to home"
   }
 }

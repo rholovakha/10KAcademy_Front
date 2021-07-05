@@ -1,0 +1,38 @@
+.page-not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #262626;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  &__title {
+    svg {
+      display: block;
+      width: 28.1rem;
+      height: auto;
+
+      @media screen and (max-width: 768px) {
+        width: 13.7rem;
+      }
+    }
+  }
+
+  &__text {
+    padding-top: .5rem;
+    font-family: Russo One;
+    font-size: 4.36rem;
+    color: #fff;
+
+    @media screen and (max-width: 768px) {
+      font-size: 2.25rem;
+    }
+  }
+
+  &__button {
+    padding-top: 2.5rem;
+  }
+}

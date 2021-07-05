@@ -46,14 +46,23 @@ button, input, textarea {
   font-size: inherit;
 }
 a {
-  color: #067bbf;
-  text-decoration: underline;
+  &:not(.button_clean-link) {
+    color: #067bbf;
+    text-decoration: underline;
+
+    &:hover,
+    &:active {
+      color: #067bbf;
+      text-decoration: none;
+    }
+  }
+
+  &.button_clean-link {
+    display: inline-block;
+    text-decoration: none;
+  }
 }
-a:hover,
-a:active {
-  color: #067bbf;
-  text-decoration: none;
-}
+
 html {
   height: 100%;
   scroll-behavior: smooth;
