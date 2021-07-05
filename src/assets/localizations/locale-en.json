@@ -115,7 +115,11 @@
     "text": "Send a request"
   },
   "submit-consultation-result": {
-    "titleImageUrl": "/assets/images/thanks.png",
-    "text": "Твоя заявка была отправлена!"
+    "titleImageUrl": "/assets/images/thanks-en.png",
+    "text": "Your application has been sent!"
+  },
+  "page-not-found": {
+    "text": "Page not found",
+    "button": "Go to home"
   }
 }
